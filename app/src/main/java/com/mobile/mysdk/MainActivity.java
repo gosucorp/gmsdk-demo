@@ -22,7 +22,6 @@ import com.facebook.share.Sharer;
 import com.gamo.sdk.GamoSDK;
 import com.gamo.sdk.DialogLoginID.OnLoginListener;
 import com.gamo.sdk.DialogLoginID.OnLogoutListener;
-import com.gamo.sdk.FloatingView;
 import com.gamo.sdk.utils.MySDKConstant;
 
 import java.io.UnsupportedEncodingException;
@@ -47,10 +46,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String ClientID = "m980.dQF1Lkx17YEclineQ0";
         // init GAMO SDK
-        mGamo = new GamoSDK(this, "A");
-        mGamo.setLanguage("zh-rTW");
-        
+        mGamo = new GamoSDK(this, ClientID);
+
         // init for activity
         final TextView tv_UID = (TextView) this.findViewById(R.id.txt_uID);
         tv_UID.setText("UserName: ");
