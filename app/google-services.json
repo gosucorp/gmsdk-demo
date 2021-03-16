@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "374783872215",
+    "firebase_url": "https://demosdkgamo.firebaseio.com",
+    "project_id": "demosdkgamo",
+    "storage_bucket": "demosdkgamo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374783872215:android:1ad8c54789f59e62fcf492",
+        "android_client_info": {
+          "package_name": "com.mobile.mysdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374783872215-5lpb51a7nhc8emgvb5h396ruf7re1no4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyMMTj8EE0VlHDzW2MAm_JG9QGsTX3wQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374783872215-5lpb51a7nhc8emgvb5h396ruf7re1no4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374783872215:android:231510e796a05479fcf492",
+        "android_client_info": {
+          "package_name": "kh.gamo.pklegend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374783872215-5lpb51a7nhc8emgvb5h396ruf7re1no4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyMMTj8EE0VlHDzW2MAm_JG9QGsTX3wQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374783872215-5lpb51a7nhc8emgvb5h396ruf7re1no4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
