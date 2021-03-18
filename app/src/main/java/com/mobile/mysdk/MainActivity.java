@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
         // init GAMO SDK
         mGamo = new GamoSDK(this, "A");
         mGamo.setLanguage("zh-rTW");
-        
+
         // init for activity
         final TextView tv_UID = (TextView) this.findViewById(R.id.txt_uID);
         tv_UID.setText("UserName: ");
