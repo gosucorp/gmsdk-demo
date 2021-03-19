@@ -19,10 +19,10 @@ import android.widget.Toast;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.share.Sharer;
+import com.gamo.sdk.DialogLoginID;
 import com.gamo.sdk.GamoSDK;
-import com.gamo.sdk.DialogLoginID.OnLoginListener;
-import com.gamo.sdk.DialogLoginID.OnLogoutListener;
 import com.gamo.sdk.utils.MySDKConstant;
+
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -50,6 +50,7 @@ public class MainActivity extends Activity {
         // init GAMO SDK
         mGamo = new GamoSDK(this, ClientID);
 
+
         // init for activity
         final TextView tv_UID = (TextView) this.findViewById(R.id.txt_uID);
         tv_UID.setText("UserName: ");
@@ -63,7 +64,7 @@ public class MainActivity extends Activity {
         final Button btnVaoGame = (Button) findViewById(R.id.btnVaoGame);
         btnVaoGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                mGamo.showLoginView(new OnLoginListener() {
+                mGamo.showLoginView(new DialogLoginID.OnLoginListener() {
 
                     @Override
                     public void onLoginSuccessful(String UserId, String UserName, String accesstoken) {
@@ -168,7 +169,7 @@ public class MainActivity extends Activity {
         // for logout
         findViewById(R.id.btn_logout).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                mGamo.logoutAccount(new OnLogoutListener() {
+                mGamo.logoutAccount(new DialogLoginID.OnLogoutListener() {
                     public void onLogoutSuccessful() {
                         btnVaoGame.setVisibility(View.VISIBLE);
                         layoutMain.setVisibility(View.GONE);
