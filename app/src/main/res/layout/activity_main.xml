@@ -23,7 +23,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
+        android:visibility="visible"
 
         android:background="@mipmap/bg" >
 
@@ -56,8 +56,21 @@
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/btn_appsflyer_tracking_custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="35dp"
+                android:background="@color/brown"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:text="(4)  Appsflyer Tracking Custom"
+                android:textColor="@color/white" />
+
+            <Button
                 android:id="@+id/btn_floating"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"

@@ -24,6 +24,8 @@ import com.gamo.sdk.DialogLoginID.OnLoginListener;
 import com.gamo.sdk.DialogLoginID.OnLogoutListener;
 import com.gamo.sdk.utils.MySDKConstant;
 
+import org.json.JSONObject;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
@@ -48,12 +50,7 @@ public class MainActivity extends Activity {
 
         String ClientID = "m980.dQF1Lkx17YEclineQ0";
         // init GAMO SDK
-<<<<<<< HEAD
-        mGamo = new GamoSDK(this, "A");
-        mGamo.setLanguage("zh-rTW");
-=======
         mGamo = new GamoSDK(this, ClientID);
->>>>>>> 331510a19dbf25661c8a4d590a33b9400ac2895b
 
         // init for activity
         final TextView tv_UID = (TextView) this.findViewById(R.id.txt_uID);
@@ -91,7 +88,33 @@ public class MainActivity extends Activity {
         // for payment IAP
         findViewById(R.id.btn_payment_iap).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 layoutIAP.setVisibility(View.VISIBLE);
+            }
+        });
+
+        // for appsflyer tracking custom
+        findViewById(R.id.btn_appsflyer_tracking_custom).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+
+                    JSONObject jsonContent = new JSONObject();
+                    jsonContent.put("event", "name_event");
+
+                    JSONObject jsonRole = new JSONObject();
+
+                    jsonRole.put("name", "roleName");
+                    jsonRole.put("server", "ServerID");
+
+                    jsonContent.put("params", jsonRole);
+
+                    Log.d("LOG_JSON", jsonContent.toString());
+                    mGamo.trackingStartTrialEventCustomAF(MainActivity.this, jsonContent.toString());
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
 
