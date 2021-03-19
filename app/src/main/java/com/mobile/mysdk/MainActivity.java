@@ -23,6 +23,10 @@ import com.gamo.sdk.DialogLoginID;
 import com.gamo.sdk.GamoSDK;
 import com.gamo.sdk.utils.MySDKConstant;
 
+<<<<<<< HEAD
+=======
+import org.json.JSONObject;
+>>>>>>> 29c1dcd303d5aba9f0f4330cd01b73533ec7e456
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -87,7 +91,33 @@ public class MainActivity extends Activity {
         // for payment IAP
         findViewById(R.id.btn_payment_iap).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 layoutIAP.setVisibility(View.VISIBLE);
+            }
+        });
+
+        // for appsflyer tracking custom
+        findViewById(R.id.btn_appsflyer_tracking_custom).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+
+                    JSONObject jsonContent = new JSONObject();
+                    jsonContent.put("event", "name_event");
+
+                    JSONObject jsonRole = new JSONObject();
+
+                    jsonRole.put("name", "roleName");
+                    jsonRole.put("server", "ServerID");
+
+                    jsonContent.put("params", jsonRole);
+
+                    Log.d("LOG_JSON", jsonContent.toString());
+                    mGamo.trackingStartTrialEventCustomAF(MainActivity.this, jsonContent.toString());
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
 
