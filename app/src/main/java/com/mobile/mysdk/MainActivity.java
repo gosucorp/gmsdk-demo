@@ -50,7 +50,8 @@ public class MainActivity extends Activity {
 
         String ClientID = "m980.dQF1Lkx17YEclineQ0";
         // init GAMO SDK
-        mGamo = new GamoSDK(this, ClientID);
+        GamoSDK.getSharedInstance().initialize(this, ClientID);
+        mGamo = GamoSDK.getSharedInstance();
 
         // init for activity
         final TextView tv_UID = (TextView) this.findViewById(R.id.txt_uID);
