@@ -22,12 +22,7 @@ import com.facebook.share.Sharer;
 import com.gamo.sdk.DialogLoginID;
 import com.gamo.sdk.GamoSDK;
 import com.gamo.sdk.utils.MySDKConstant;
-
-<<<<<<< HEAD
-=======
 import org.json.JSONObject;
->>>>>>> 29c1dcd303d5aba9f0f4330cd01b73533ec7e456
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
