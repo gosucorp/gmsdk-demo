@@ -287,37 +287,7 @@ public class MainActivity extends Activity {
         }
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        try {
-            if(mGamo != null)
-                mGamo.gamoSDKOnPause();
-        } catch (Exception e) {
-
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        try {
-            if(mGamo != null)
-                mGamo.gamoSDKOnResume();
-        } catch (Exception e) {
-        }
-    }
-
-    // We're being destroyed. It's important to dispose of the helper here!
-    @Override
-    public void onDestroy() {// very important
-        try {
-            if (mGamo != null)
-                mGamo.gamoSDKOnDestroy();
-        } catch (Exception e) {}
-        super.onDestroy();
-    }
-
+   
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         mGamo.onActivityResult(requestCode, resultCode, data);
