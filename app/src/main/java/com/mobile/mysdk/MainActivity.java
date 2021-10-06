@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String ClientID = "m980.dQF1Lkx17YEclineQ0";
+        String ClientID = "m979.29Nn8l3otS7ZLylB";
         // init GAMO SDK
         GamoSDK.getSharedInstance().initialize(this, ClientID);
         mGamo = GamoSDK.getSharedInstance();
